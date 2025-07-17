@@ -1,3 +1,4 @@
+//Q.To convert a List of String to a String of array
 package java8;
 
 import java.util.Arrays;
