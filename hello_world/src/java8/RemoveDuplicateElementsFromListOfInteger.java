@@ -3,7 +3,7 @@ package java8;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Test1 {
+public class RemoveDuplicateElementsFromListOfInteger {
     public static void main(String[] args) {
         List<Integer> l = Arrays.asList(1,2,2,3,4,5,3);
          List<Integer> res=l.stream().distinct().collect(Collectors.toList());

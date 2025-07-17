@@ -1,3 +1,4 @@
+//Q.Find the Fibonacci series of 1st 10 elements
 package java8;
 
 import java.util.stream.Collectors;

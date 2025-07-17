@@ -24,5 +24,6 @@ public class Demo2 {
                     return c.getValue();
                 }).flatMap(s->s.stream()).collect(Collectors.toList());
         System.out.println(sq);
+
     }
 }

@@ -3,7 +3,7 @@ package java8;
 
 import java.util.Arrays;
 import java.util.stream.Stream;
-public class Test {
+public class ConvertListOfStringToStringOfArray {
     public static void main(String[] args) {
         String[] names = Stream.of("A", "B").toArray(String[]::new);
         System.out.println(Arrays.toString(names));

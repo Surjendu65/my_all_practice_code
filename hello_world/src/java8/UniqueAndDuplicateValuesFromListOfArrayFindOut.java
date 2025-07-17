@@ -1,11 +1,9 @@
 //Q. Print unique & duplicate values from list of Array
 package java8;
-
 import java.util.*;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-public class Test2 {
+public class UniqueAndDuplicateValuesFromListOfArrayFindOut {
     public static void main(String[] args) {
         List<Integer> l = Arrays.asList(1,2,2,3,4,5,3);
         Map<Integer,Long> m = l.stream()
@@ -26,6 +24,5 @@ public class Test2 {
         List<Integer> llst=l.stream().filter(x->st.add(x)).collect(Collectors.toList());
         //System.out.println(st);
         System.out.println(llst);
-
     }
 }
