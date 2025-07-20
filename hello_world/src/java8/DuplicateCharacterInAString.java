@@ -17,7 +17,6 @@ public class DuplicateCharacterInAString {
                 .map(x -> x.getKey())
                 .collect(Collectors.toList());
         System.out.println(lis);
-
         System.out.println("Commit -1");
     }
 }
