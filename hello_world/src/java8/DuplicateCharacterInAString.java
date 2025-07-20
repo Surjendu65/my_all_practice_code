@@ -18,5 +18,11 @@ public class DuplicateCharacterInAString {
                 .collect(Collectors.toList());
         System.out.println(lis);
         System.out.println("Commit -1");
+        System.out.println("Addition Result"+add(2,3));
+
     }
+    public static int add(int a,int b){
+        return a+b;
+    }
+
 }
