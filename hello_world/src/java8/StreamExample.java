@@ -8,5 +8,6 @@ public class StreamExample {
         names.stream()
                 .filter(name -> name.startsWith("Ra"))
                 .forEach(System.out::println);
+        System.out.println("Hello example");
     }
 }
