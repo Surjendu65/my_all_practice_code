@@ -19,6 +19,8 @@ public class DuplicateCharacterInAString {
         System.out.println(lis);
         System.out.println("Commit -1");
         System.out.println("Addition Result"+add(2,3));
+        System.out.println("java is a good programming language");
+        System.out.println("Intellij is a good IDE");
 
     }
     public static int add(int a,int b){
