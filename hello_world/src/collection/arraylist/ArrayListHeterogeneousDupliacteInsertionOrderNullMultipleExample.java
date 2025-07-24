@@ -11,6 +11,7 @@ public class ArrayListHeterogeneousDupliacteInsertionOrderNullMultipleExample {
         al.add(12.4);
         al.add(null);
         al.add(null);
+        al.add("ruby");
         System.out.println(al);
     }
 }
