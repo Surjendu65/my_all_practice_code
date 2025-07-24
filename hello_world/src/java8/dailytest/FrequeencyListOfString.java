@@ -11,7 +11,7 @@ public class FrequeencyListOfString {
                 .collect(Collectors.groupingBy(x->x,Collectors.counting()));
         System.out.println(v);
         System.out.println("----------");
-        List<String> lis1 = lis.stream().map(String::toLowerCase).collect(Collectors.toList());
+        List<String> lis1 = lis.stream().map(String::toLowerCase).toList();
         var v1 = lis1.stream().flatMap(x->Arrays.stream(x.split(" ")))
                 .collect(Collectors.groupingBy(x->x,Collectors.counting()));
         System.out.println(v1);

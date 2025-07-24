@@ -15,20 +15,19 @@ public class ReverseEachWordsInAString {
         System.out.println(v);
         v = Arrays.stream(str.split(" "))
                 .map(word-> {
-                    var ss="";
-                    for(var i=word.length()-1;i>=0;i--){
-                        ss=ss+word.charAt(i);
+                    StringBuilder sb = new StringBuilder();
+                    for (int i = word.length() - 1; i >= 0; i--) {
+                        sb.append(word.charAt(i));
                     }
-                    return ss;
+                    return sb.toString();
                 })
                 .collect(Collectors.joining(" "));
         System.out.println(v);
 
         var resString=IntStream.range(0,list.size())
-                .mapToObj(x->list.get(x))
-                .reduce("",(a,b)->{
-                   return a+" "+new StringBuffer(b).reverse().toString().trim();
-                });
+                .mapToObj(list::get)
+                .reduce("",(a,b)->
+                    a+" "+new StringBuffer(b).reverse().toString().trim());
         System.out.println(resString);
 
         resString=IntStream.range(0,list.size())

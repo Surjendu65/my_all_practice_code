@@ -17,11 +17,11 @@ public class Test12 {
 
         List<Integer> l1 = Arrays.asList(10,20,4,5);
         List<Integer> l2 = Arrays.asList(1,20,3,4,10);
-        List<Integer> res = l1.stream().filter(l2::contains).collect(Collectors.toList());
+        List<Integer> res = l1.stream().filter(l2::contains).toList();
         System.out.println(res);
 
         Set<Integer> st = new HashSet<>(l2);
-        List<Integer> sres = l1.stream().filter(st::contains).collect(Collectors.toList());
+        List<Integer> sres = l1.stream().filter(st::contains).toList();
         System.out.println(sres);
 
      String str="Java is Good Programming Language";

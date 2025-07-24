@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class AddPrefixAndSuffixToString {
     public static void main(String[] args) {
         List<String> words = Arrays.asList("Java", "is", "awesome");
-        words.stream().collect(Collectors.joining("","[","]"));
-        System.out.println(words);
+        String result =  words.stream().collect(Collectors.joining(" ","[","]"));
+        System.out.println(result);
     }
 }

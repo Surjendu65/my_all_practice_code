@@ -7,6 +7,8 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Test9 {
+    private static final String NOT_ANAGRAM="NOT ANAGRAM";
+    private static final String ANAGRAM="ANAGRAM";
     public static void main(String[] args) {
         int num = 12345;
         String str1="peek";
@@ -22,27 +24,26 @@ public class Test9 {
                 collect(Collectors.groupingBy(x->x,Collectors.counting()));
         for(int i=0;i<str2.length();i++){
             char ch=str2.charAt(i);
-            if(map.size()!=map1.size()){
-                if(map.get(ch+"")!=map1.get(ch+"")){
-                    System.out.println("Not Anagram");
+
+                if(map.size()!=map1.size() && map.get(ch+"").equals(map1.get(ch+""))){
+                    System.out.println(NOT_ANAGRAM);
                     break;
                 }
-            }
-            if(map.get(ch+"")!=map1.get(ch+"")){
-                System.out.println("Not Anagram");
+            if(map.get(ch+"").equals(map1.get(ch+""))){
+                System.out.println(NOT_ANAGRAM);
                 break;
             }
         }
-        System.out.println("Anagram");
+        System.out.println(ANAGRAM);
         boolean flag=false;
         for(int i=0;i<str2.length();i++){
             char ch=str2.charAt(i);
             if(!map.containsKey(ch+"")){
                 flag=true;
-                System.out.println("Not Anagram");
+                System.out.println(NOT_ANAGRAM);
                 break;
             }else if(map.containsKey(ch+"") && map.get(ch+"")==0){
-                System.out.println("Not Anagram");
+                System.out.println(NOT_ANAGRAM);
                 flag=true;
                 break;
             }else{
@@ -50,11 +51,12 @@ public class Test9 {
             }
 
         }
-        if(flag==false)
-        System.out.println("Anagram");
+        if(!flag) {
+            System.out.println(ANAGRAM);
+        }
 
 
-        System.out.println(b?"Anagram":"Not Anagaram");
+        System.out.println(b?ANAGRAM:NOT_ANAGRAM);
         int s = Stream.of(String.valueOf(num).split("")).mapToInt(Integer::parseInt)
                         .sum();
         var c= Arrays.asList((num+"").split("")).stream().mapToInt(Integer::parseInt)

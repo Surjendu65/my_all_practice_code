@@ -1,12 +1,12 @@
 package java8;
-import java.util.function.Predicate;
+import java.util.function.IntPredicate;
 public class EvenOddPredicate {
         public static void main(String[] args) {
             // Predicate to check if number is even
-            Predicate<Integer> isEven = number -> number % 2 == 0;
+            IntPredicate isEven = number -> number % 2 == 0;
 
             // Predicate to check if number is odd
-            Predicate<Integer> isOdd = number -> number % 2 != 0;
+            IntPredicate isOdd = number -> number % 2 != 0;
 
             // Test numbers
             int num1 = 10;

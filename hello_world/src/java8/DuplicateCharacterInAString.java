@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+
 
 public class DuplicateCharacterInAString {
     public static void main(String[] args) {
@@ -14,8 +14,8 @@ public class DuplicateCharacterInAString {
 
         List<String> lis = m.entrySet().stream()
                 .filter(x -> x.getValue() > 1)
-                .map(x -> x.getKey())
-                .collect(Collectors.toList());
+                .map(Map.Entry::getKey)
+                .toList();
         System.out.println(lis);
         System.out.println("Commit -1");
         System.out.println("Addition Result"+add(2,3));

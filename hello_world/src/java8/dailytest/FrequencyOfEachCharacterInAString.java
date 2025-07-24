@@ -21,7 +21,7 @@ public class FrequencyOfEachCharacterInAString {
         System.out.println(map);
 
         var freq = str.chars().mapToObj(c->(char)c)
-                .collect(Collectors.groupingBy(c -> c, Collectors.counting()));;
+                .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
         System.out.println(freq);
 
     }

@@ -11,7 +11,7 @@ public class PrintDuplicateElementsFromListOfInteger {
         Map<Integer,Long> m = numbers.stream().collect(Collectors.groupingBy(x->x,Collectors.counting()));
 
         List<Integer> duplicate = m.entrySet().stream().filter(x->x.getValue()>1)
-                .map(x-> x.getKey()).collect(Collectors.toList());
+                .map(Map.Entry::getKey).toList();
         System.out.println(duplicate);
 
     }

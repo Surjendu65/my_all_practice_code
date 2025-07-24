@@ -35,7 +35,7 @@ public class GroupOddAndEvenNumbers {
                         return a*a;
                     }
                     return a;
-                }).collect(Collectors.toList()))));
+                }).toList())));
         System.out.println(mp);
 
         map=l.stream().map(a->{

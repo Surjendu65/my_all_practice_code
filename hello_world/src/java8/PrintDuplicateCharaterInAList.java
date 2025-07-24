@@ -7,10 +7,10 @@ public class PrintDuplicateCharaterInAList {
     public static void main(String[] args) {
         List<String> list = Arrays.asList("p", "r", "o", "g", "r", "a", "m", "m", "e","o");
         Map<String, Long> m = list.stream().collect(Collectors.groupingBy(x->x,Collectors.counting()));
-        List<String> dupChar = m.entrySet().stream().filter(x->x.getValue()> 1).map(x->x.getKey()).collect(Collectors.toList());
+        List<String> dupChar = m.entrySet().stream().filter(x->x.getValue()> 1).map(Map.Entry::getKey).toList();
         System.out.println(dupChar);
         Set<String> st=new HashSet<>();
-        var dup=list.stream().filter(x->!st.add(x)).collect(Collectors.toList());
+        var dup=list.stream().filter(x->!st.add(x)).toList();
         System.out.println(dup);
 
         List<String> list1=new ArrayList<>();
@@ -21,7 +21,7 @@ public class PrintDuplicateCharaterInAList {
                 list1.add(x);
                 return false;
             }
-        }).collect(Collectors.toList());
+        }).toList();
         System.out.println(dup1);
 
 

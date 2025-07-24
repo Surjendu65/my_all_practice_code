@@ -20,7 +20,7 @@ public class Sum1To10 {
         System.out.println(s2);
 
         List<Integer> list=IntStream.range(1,11).mapToObj(Integer::valueOf)
-                .collect(Collectors.toList());
+                .toList();
         System.out.println(list);
         var d=list.stream().mapToInt(Integer::intValue).sum();
         System.out.println(d);
